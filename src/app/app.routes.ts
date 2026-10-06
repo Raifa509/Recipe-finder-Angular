@@ -14,7 +14,6 @@ export const routes: Routes = [
     { path: 'about', component: About, title: "Recipe Finder | About" },
     { path: 'login', component: Login, title: "Recipe Finder | Login" },
     { path: 'register', component: Register, title: "Recipe Finder | Register" },
-    { path: 'login', component: Login, title: "Recipe Finder | Login" },
     { path: 'profile', component: Profile, title: "Recipe Finder | Profile" },
     { path: 'recipes', component: Recipes, title: "Recipe Finder | Recipes" },
     { path: 'recipe/saved', component: SaveRecipes, title: "Recipe Finder | Saved Recipes" },

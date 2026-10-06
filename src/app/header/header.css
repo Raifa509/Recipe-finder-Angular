@@ -1,0 +1,9 @@
+.navbar-link {
+    transition: 0.3s ease;
+    border-radius: 5px;
+}
+
+.navbar-link:hover {
+    color: #198754 !important;
+    background-color: white;
+}
