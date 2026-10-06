@@ -16,6 +16,9 @@
     display: inline-block;
     animation: scroll-left 20s linear infinite;
 }
+.scroll-text:hover{
+    animation-play-state: paused;
+}
 @keyframes scroll-left {
     from{
         transform: translateX(100%);
@@ -23,4 +26,13 @@
     to{
         transform: translateX(-100%);
     }
+}
+
+.explore-btn {
+    background-color: #F28C28;
+    color: white;
+}
+
+.explore-btn:hover {
+    background-color: #e67e22;
 }

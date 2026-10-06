@@ -4,3 +4,8 @@
     padding: 0px;
     font-family: "Poppins", sans-serif;
 }
+html,
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}

@@ -13,25 +13,23 @@
                     <a class="nav-link active text-light navbar-link" aria-current="page" routerLink="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active text-light navbar-link" aria-current="page" routerLink="/recipes">Recipes</a>
+                    <a class="nav-link active text-light navbar-link" aria-current="page"
+                        routerLink="/recipes">Recipes</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link active text-light navbar-link" aria-current="page" routerLink="/about">About</a>
+                    <a class="nav-link active text-light navbar-link" aria-current="page" routerLink="/" fragment="about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active text-light navbar-link" aria-current="page" routerLink="/reviews">Reviews</a>
+                    <a class="nav-link active text-light navbar-link" aria-current="page"
+                        routerLink="/" fragment="reviews">Reviews</a>
                 </li>
             </ul>
-            <div class="dropdown ms-auto me-5">
-                <button class="btn btn-outline-light rounded dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    <i class="fa-solid fa-user"></i>
+            <div class=" ms-auto me-5">
+                <button routerLink="/login" class="btn px-4 btn-outline-light rounded" type="button">
+                        Login
                 </button>
-                <ul class="dropdown-menu dropdown-menu-end">
-                    <li><a class="dropdown-item" routerLink="/login">Login</a></li>
-                    <li><a class="dropdown-item" routerLink="/register">Register</a></li>
-                </ul>
+
             </div>
         </div>
     </div>

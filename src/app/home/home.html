@@ -2,77 +2,170 @@
 <div>
 
     <!-- landing -->
-    <div class="row p-5  align-items-center" style="background-color: #f7f3f0;">
+    <div class="row p-5  align-items-center"
+        style="background-image: url('https://i.pinimg.com/1200x/7d/22/8a/7d228a60a85ecaa97eddcf685d02df7a.jpg');background-repeat: no-repeat;height: 550px;background-size: cover;">
         <div class="col-lg-1"></div>
-        <div class="col-lg-4" style="color:#F28C28">
-            <h1 style="font-size: 35px;">The Easiest Way to Make Your Favorite Meal</h1>
-            <p style="text-align: justify; font-size: 18px;" class="my-3">Discover 100+ recipes in your hand with the
+        <div class="col-lg-5" style="color:#F28C28">
+            <h1 style="font-size: 45px;">The Easiest Way to Make Your Favorite Meal</h1>
+            <p style="text-align: justify; font-size: 19px;" class="my-3">Discover 100+ recipes in your hand with the
                 best recipe. Help
                 You to find the
                 easiest way to cook.</p>
-            <button class="btn btn-light border py-2 px-4 rounded mt-4" routerLink="/recipes">Explore Our
+            <button class="btn text-white border explore-btn  py-2 px-4 rounded mt-4" routerLink="/recipes">Explore Our
                 Recipes</button>
         </div>
         <div class="col-lg-3"></div>
-        <div class="col-lg-4">
-            <img class="w-75 mt-3 landingImg " src="https://www.pngall.com/wp-content/uploads/2/Healthy-Meal.png"
-                alt="">
-        </div>
+
     </div>
 
     <!-- popular recipe -->
-    <div class="p-5 my-5">
-        <h2>Popular Recipe of the Week</h2>
-        <div class="d-flex justify-content-between">
+    <div class="p-5 my-3">
+        <h3>Popular Recipe of the Week</h3>
+        <div style="height:5px;width:10rem" class="bg-success"></div>
+
+        <div class="d-flex justify-content-between mt-1">
             <p>Our Most Popular recipes of the Week</p>
-            <a routerLink="/recipes">View All</a>
+
+            <div class="d-flex align-items-center gap-2">
+                <a routerLink="/recipes" class="text-decoration-none text-black">View All</a>
+                <i class="fa-solid fa-chevron-right fs-6"></i>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-lg-5">
+                <div class="p-2">
+                    <div class="card p-2 rounded-2" style="width: 18rem;">
+                        <img src="https://i.pinimg.com/1200x/82/5c/01/825c01786eead0aa450390265a1a704a.jpg"
+                            class="card-img-top rounded-2" alt="...">
+                        <div class="card-body d-flex align-items-center justify-content-between">
+                            <p class="card-text text-success fw-medium mb-0">
+                                Chicken Curry
+                            </p>
+                            <i class="fa-regular fa-heart fs-5 text-danger"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </div>
+    <!-- about us -->
+    <div id="about" class=" py-2">
+        <div class="row gap-5 align-items-center">
 
+            <!-- Image -->
+            <div class="col-lg-4 text-center mb-4 mb-lg-0">
+                <img src="/aboutus.png" alt="Cooking delicious food" class="img-fluid " width="480" height="400">
+            </div>
+
+            <!-- Content -->
+            <div class="col-lg-6">
+
+                <h2 class="fw-bold">About Us</h2>
+
+                <div style="height: 5px; width: 10rem;" class="bg-success mb-4">
+                </div>
+
+                <p class="text-secondary" style="text-align: justify;">
+                    We believe that great food doesn't have to be complicated.
+                    Our mission is to make everyday cooking easier, more enjoyable,
+                    and more inspiring by bringing delicious recipes together in
+                    one simple place.
+                </p>
+
+                <p class="text-secondary" style="text-align: justify;">
+                    Whether you're looking for a quick breakfast, a healthy lunch,
+                    a comforting dinner, or something special for your family and
+                    friends, you'll find plenty of recipes to explore. Our recipes
+                    are created with simple ingredients and easy-to-follow steps,
+                    making them perfect for both beginners and experienced home cooks.
+                </p>
+
+                <p class="text-secondary" style="text-align: justify;">
+                    From traditional favorites to creative new dishes, our goal is
+                    to inspire you to try new flavors and enjoy the cooking
+                    experience. We want every recipe to help you create delicious
+                    meals and memorable moments with the people you love.
+                </p>
+
+                <!-- Features -->
+                <div class="row mt-4">
+
+                    <div class="col-md-4 mb-3">
+                        <i class="fa-solid fa-utensils text-success fs-3"></i>
+                        <h6 class="fw-bold mt-2">Easy Recipes</h6>
+                        <p class="text-secondary small">
+                            Simple recipes with easy-to-follow instructions.
+                        </p>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <i class="fa-solid fa-heart text-success fs-3"></i>
+                        <h6 class="fw-bold mt-2">Made With Love</h6>
+                        <p class="text-secondary small">
+                            Delicious ideas made for family and friends.
+                        </p>
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+                        <i class="fa-solid fa-bowl-food text-success fs-3"></i>
+                        <h6 class="fw-bold mt-2">For Everyone</h6>
+                        <p class="text-secondary small">
+                            Recipes for every taste and occasion.
+                        </p>
+                    </div>
+
+                </div>
+
+                <!-- Button -->
+                <button class="btn text-white explore-btn py-2 px-4 rounded mt-2" routerLink="/recipes">
+                    Explore Our Recipes
+                    <i class="fa-solid fa-arrow-right ms-2"></i>
+                </button>
+
+            </div>
+        </div>
+    </div>
     <!-- recipe banner -->
-    <div style="background-image: url('https://img.freepik.com/premium-photo/food-banners_583952-13024.jpg');height: 400px;background-repeat: no-repeat;background-size: cover;"
+    <div style="background-image: url('https://i.pinimg.com/1200x/d2/36/93/d236938c9cc9b4ab5ae180540502f9dc.jpg');height: 400px;background-repeat: no-repeat;background-size: cover;"
         class="my-5 row align-items-center">
         <div class="col-lg-6"></div>
         <div class="col-lg-6">
-            <div class="bg-light rounded p-5 w-75">
+            <div class="bg-light shadow rounded p-5 w-75">
                 <h4>50+ Recipes That Very <br> Quick And Fast</h4>
-                <p class="text-secondary">Find the perfect food ideas to start your day with the quick and easiest way.
+                <div style="height:5px;width:5rem" class="bg-success"></div>
+
+                <p class="text-secondary mt-1">Find the perfect food ideas to start your day with the quick and
+                    easiest
+                    way.
                 </p>
             </div>
         </div>
     </div>
 
-    <!-- download app -->
-    <div class="my-5 p-5 row align-items-center bg-success rounded text-light">
-        <div class="col-lg-6 d-flex align-items-center justify-content-center">
-            <img height="350px"
-                src="https://toppng.com/uploads/thumbnail/android-app-on-google-play-11568829115kt4gig8l67.png" alt="">
-        </div>
-        <div class="col-lg-6 text-center d-flex align-items-center justify-content-center flex-column">
-            <h2>Download App</h2>
-            <h6>Download the App from App Store or Google Play <br>for a better experience</h6>
-            <div class="d-flex align-items-center justify-content-center mt-2">
-                <img style="width: 120px; height: 60px;"
-                    src="https://freepngimg.com/download/android/67006-app-play-google-android-store-free-clipart-hd.png"
-                    alt="">
-                <img style="width: 130px;height: 85px;"
-                    src="https://benic360.com/wp-content/uploads/2020/06/apple-store-icon-png-8.png" alt="">
-            </div>
-        </div>
-    </div>
 
     <!-- testimony -->
-    <div class=" my-5 text-center scroll-wrapper">
-        <h3>Client Testimonial</h3>
+    <div class=" my-5 text-center scroll-wrapper" id="reviews">
+        <h3>What others are saying</h3>
+        <div style="height:5px;width:10rem" class="bg-success  mx-auto"></div>
         <div class="scroll-text my-5 d-flex">
 
             <!-- duplicate -->
-            <div class="border shadow rounded p-5 me-2 w-25 text-wrap">
-                <span class="fw-bold">Client-name</span>
-                <p style="text-align: justify;" class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <div
+                class=" d-flex align-items-center justify-content-center flex-column  rounded-4 shadow p-5 mt-5 me-2 w-25 text-wrap text-dark">
+                <span class="fw-bold">Riyan</span>
+                <div class="d-flex gap-2">
+                    @for (item of stars; track $index) {
+                    <i class="fa-solid fa-star text-warning my-2"></i>
+                    }
+                </div>
+                <p style="text-align: justify;" class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit.
                     Recusandae a sequi nesciunt incidunt modi
-                    id. Sint fugit illum laudantium magni, omnis quibusdam culpa illo laboriosam corrupti doloribus esse
+                    id. Sint fugit illum laudantium magni, omnis quibusdam culpa illo laboriosam corrupti doloribus
+                    esse
                     iure nobis.</p>
             </div>
         </div>
