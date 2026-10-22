@@ -1,1 +1,122 @@
-<p>recipes works!</p>
+<app-header />
+
+<div class="mt-3 " style="min-height: 100vh;">
+    <div class="d-flex align-items-center justify-content-center flex-column mt-5">
+        <h4>All Recipes</h4>
+        <p class="text-secondary fst-italic">Explore our collection of tasty and easy-to-make recipes.</p>
+    </div>
+    <div class="d-flex justify-content-end me-5">
+        <input [(ngModel)]="searchKey" type="text" class="form-control w-25" placeholder="Search your recipes...">
+    </div>
+
+    <!-- filter + cards -->
+    <div class="row px-4 mt-3">
+        <div class="col-lg-2 mb-5">
+            <p class="fs-5 ms-2 ">Filters</p>
+            <button (click)="clearFilters()" class="btn ">All</button>
+            <!-- cusine dropdown -->
+            <br />
+            <button class="btn dropdown-toggle" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                Cuisine Type
+            </button>
+            <div class="collapse" id="collapseExample">
+                <!-- duplicate cuisine types -->
+                @for (item of cuisineArray; track $index) {
+                <button (click)="filterRecipe('cuisine', item)" [class.active-filter]="selectedCuisine === item"
+                    class="filter-btn rounded-pill">
+                    {{ item }}
+                </button>
+                }
+
+            </div>
+            <!-- meal type dropdown -->
+            <br />
+            <button class="btn dropdown-toggle" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+                Meal Type
+            </button>
+            <div class="collapse" id="collapseExample1">
+                <!-- duplicate meal types -->
+                @for (item of mealTypeArray; track $index) {
+                <button (click)="filterRecipe('mealType',item)" [class.active-filter]="selectedMealType === item"
+                    class="filter-btn rounded-pill">{{item}}</button>
+                }
+            </div>
+            <br />
+            <button class="btn dropdown-toggle" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                Difficulty
+            </button>
+            <div class="collapse" id="collapseExample2">
+                <!-- duplicate difficuly -->
+                @for (item of difficultyArray; track $index) {
+                <button (click)="filterRecipe('difficulty',item)" [class.active-filter]="selectedDifficulty === item"
+                    class="filter-btn rounded-pill">{{item}}</button>
+                }
+            </div>
+        </div>
+        <!-- cards -->
+        <div class="col-lg-10 mt-5">
+
+
+            <div class="row">
+                @for (recipe of allRecipes | search:searchKey | paginate: { itemsPerPage: 8, currentPage: p }; track $index) {
+                <div (click)="navigateView(recipe.id)" class="col-lg-3 mb-4">
+                    <div class="card p-2 rounded-2 recipe-card">
+
+                        <img [src]="recipe.image" class="card-img-top rounded-2 recipe-image" alt="{{ recipe.name }}">
+
+                        <span class="position-absolute top-2 end-0 mx-2 px-2 py-1 bg-success text-white rounded-2">
+                            {{ recipe.difficulty }}
+                        </span>
+
+                        <div class="card-body p-2">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <p class="card-text text-success fw-medium mb-0">
+                                    {{ recipe.name }}
+                                </p>
+
+                                <div class="d-flex align-items-center gap-1">
+                                    <span class="text-secondary">
+                                        {{ recipe.rating }}
+                                    </span>
+                                    <i class="fa-solid fa-star text-warning"></i>
+                                </div>
+                            </div>
+
+                            <p class="text-muted mb-1 mt-3">
+                                Servings:
+                                <span class="ps-1">{{ recipe.servings }}</span>
+                            </p>
+
+                            <p class="text-muted mb-1">
+                                Cuisine: {{ recipe.cuisine }}
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                }
+            </div>
+
+            @if((allRecipes | search:searchKey).length==0) {
+            <div class="d-flex align-items-center justify-content-center flex-column mt-5" style="height:40%">
+                <img src="/no-search.png" alt="No recipes found" width="400px" height="500px">
+                <h6>No recipes found</h6>
+
+                <p (click)="clearFilters()" class="text-muted clearfilter">
+                    Clear Filters
+                </p>
+            </div>
+
+            }
+
+        </div>
+        <div class="text-center mt-5">
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+    </div>
+</div>
+<app-footer />
